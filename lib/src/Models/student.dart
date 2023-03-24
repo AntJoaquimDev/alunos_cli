@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'address.dart';
 import 'course.dart';
 
-class Students {
+class Student {
   final int? id;
   final String name;
   final int? age;
@@ -10,7 +10,7 @@ class Students {
   final Address? address;
   final List<Course> courses;
 
-  Students({
+  Student({
     this.id,
     required this.name,
     this.age,
@@ -35,8 +35,8 @@ class Students {
   }
 
 //3º passo da deserializacao recebe um mapa
-  factory Students.fromMap(Map<String, dynamic> map) {
-    return Students(
+  factory Student.fromMap(Map<String, dynamic> map) {
+    return Student(
         id: map['id'] ?? 0,
         name: map['name'] ?? '',
         nameCourses: List<String>.from(map['nameCourses'] ?? <String>[]),
@@ -47,8 +47,8 @@ class Students {
             <Course>[]);
   }
   String toJson() => json.encode(toMap());
-  factory Students.fromJson(String source) =>
-      Students.fromMap(json.decode(source));
+  factory Student.fromJson(String source) =>
+      Student.fromMap(json.decode(source));
 
   @override
   String toString() {
