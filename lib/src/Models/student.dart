@@ -1,47 +1,6 @@
 import 'dart:convert';
 import 'address.dart';
 import 'course.dart';
-/*
-    "id": 1,
-    "name": "Celenny Cristhyne",
-    "nameCourses": [
-        "Academia Flutter"
-    ],
-    "courses": [
-        {
-            "id": 1,
-            "name": "Academia do Flutter",
-            "isStudent": true
-        },
-        {
-            "id": 2,
-            "name": "Jornada GetX",
-            "isStudent": false
-        },
-        {
-            "id": 3,
-            "name": "Jornada Clean Code",
-            "isStudent": false
-        },
-        {
-            "id": 4,
-            "name": "Jornada Arquitetura",
-            "isStudent": false
-        }
-    ],
-    "address": {
-        "street": "Rua Tiradentes",
-        "number": 654,
-        "zipCode": "64230-000",
-        "city": {
-            "id": 1,
-            "name": "Buriti dos Lopes"
-        },
-        "phone": {
-            "ddd": 86,
-            "phone": "948755556"
-        }
-    }*/
 
 class Student {
   final int? id;
