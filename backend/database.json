@@ -1,1 +1,294 @@
-{"users":[{"id":0,"name":"Rodrigo Rahman","email":"rodrigorahman@academiadoflutter.com.br","password":"123"},{"id":1,"name":"Guilherme","email":"guilherme@gmail.com","password":"1234"}],"products":[{"id":0,"name":"Academia do flutter"},{"id":1,"name":"Jornada Dart"},{"id":2,"name":"Jornada GetX"},{"id":3,"name":"Jornada Clean Code"},{"id":4,"name":"Jornada Arquitetura"}],"students":[{"id":0,"name":"Rodrigo Rahman","age":39,"nameCourses":["Academia Flutter","Jornada GetX","Jornada Clean Code"],"courses":[{"id":1,"name":"Academia do Flutter","isStudent":true},{"id":2,"name":"Jornada GetX","isStudent":true},{"id":3,"name":"Jornada Clean Code","isStudent":false},{"id":4,"name":"Jornada Arquitetura","isStudent":false}],"address":{"street":"Rua X","number":200,"zipCode":"0915225222","city":{"id":1,"name":"Santo André"},"phone":{"ddd":11,"phone":"985755555"}}},{"id":1,"name":"Celenny Cristhyne","nameCourses":["Academia Flutter"],"courses":[{"id":1,"name":"Academia do Flutter","isStudent":true},{"id":2,"name":"Jornada GetX","isStudent":false},{"id":3,"name":"Jornada Clean Code","isStudent":false},{"id":4,"name":"Jornada Arquitetura","isStudent":false}],"address":{"street":"Rua Tiradentes","number":654,"zipCode":"64230-000","city":{"id":1,"name":"Buriti dos Lopes"},"phone":{"ddd":86,"phone":"948755556"}}},{"id":2,"name":"Lassy leia","age":39,"nameCourses":["Academia Flutter"],"courses":[{"id":1,"name":"Academia do Flutter","isStudent":true},{"id":2,"name":"Jornada GetX","isStudent":true},{"id":3,"name":"Jornada Clean Code","isStudent":false},{"id":4,"name":"Jornada Arquitetura","isStudent":false}],"address":{"street":"Rua Tiradentes","number":654,"zipCode":"64230-000","city":{"id":1,"name":"Buriti dos Lopes"},"phone":{"ddd":86,"phone":"948755556"}}}]}
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Rodrigo Rahman",
+            "email": "rodrigorahman@academiadoflutter.com.br",
+            "password": "123"
+        },
+        {
+            "id": 1,
+            "name": "Guilherme",
+            "email": "guilherme@gmail.com",
+            "password": "1234"
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "name": "Academia do flutter"
+        },
+        {
+            "id": 1,
+            "name": "Jornada Dart"
+        },
+        {
+            "id": 2,
+            "name": "Jornada GetX"
+        },
+        {
+            "id": 3,
+            "name": "Jornada Clean Code"
+        },
+        {
+            "id": 4,
+            "name": "Jornada Arquitetura"
+        }
+    ],
+    "students": [
+        {
+            "id": 0,
+            "name": "Rodrigo Rahman",
+            "age": 39,
+            "nameCourses": [
+                "Academia Flutter",
+                "Jornada GetX",
+                "Jornada Clean Code"
+            ],
+            "courses": [
+                {
+                    "id": 1,
+                    "name": "Academia do Flutter",
+                    "isStudent": true
+                },
+                {
+                    "id": 2,
+                    "name": "Jornada GetX",
+                    "isStudent": true
+                },
+                {
+                    "id": 3,
+                    "name": "Jornada Clean Code",
+                    "isStudent": false
+                },
+                {
+                    "id": 4,
+                    "name": "Jornada Arquitetura",
+                    "isStudent": false
+                }
+            ],
+            "address": {
+                "street": "Rua X",
+                "number": 200,
+                "zipCode": "0915225222",
+                "city": {
+                    "id": 1,
+                    "name": "Santo André"
+                },
+                "phone": {
+                    "ddd": 11,
+                    "phone": "985755555"
+                }
+            }
+        },
+        {
+            "id": 1,
+            "name": "Celenny Cristhyne",
+            "nameCourses": [
+                "Academia Flutter"
+            ],
+            "courses": [
+                {
+                    "id": 1,
+                    "name": "Academia do Flutter",
+                    "isStudent": true
+                },
+                {
+                    "id": 2,
+                    "name": "Jornada GetX",
+                    "isStudent": false
+                },
+                {
+                    "id": 3,
+                    "name": "Jornada Clean Code",
+                    "isStudent": false
+                },
+                {
+                    "id": 4,
+                    "name": "Jornada Arquitetura",
+                    "isStudent": false
+                }
+            ],
+            "address": {
+                "street": "Rua Tiradentes",
+                "number": 654,
+                "zipCode": "64230-000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti dos Lopes"
+                },
+                "phone": {
+                    "ddd": 86,
+                    "phone": "948755556"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Lassy leia",
+            "age": 10,
+            "nameCourses": [
+                "Academia Flutter"
+            ],
+            "courses": [
+                {
+                    "id": 1,
+                    "name": "Academia do Flutter",
+                    "isStudent": true
+                },
+                {
+                    "id": 2,
+                    "name": "Jornada GetX",
+                    "isStudent": true
+                },
+                {
+                    "id": 3,
+                    "name": "Jornada Clean Code",
+                    "isStudent": false
+                },
+                {
+                    "id": 4,
+                    "name": "Jornada Arquitetura",
+                    "isStudent": false
+                }
+            ],
+            "address": {
+                "street": "Rua Tiradentes",
+                "number": 654,
+                "zipCode": "64230-000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti dos Lopes"
+                },
+                "phone": {
+                    "ddd": 86,
+                    "phone": "948755556"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Antonio joaquim",
+            "age": 42,
+            "nameCourses": [
+                "Jornada GetX",
+                "Jornada Clean Code"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "name": "Jornada GetX",
+                    "isStudent": true
+                },
+                {
+                    "id": 0,
+                    "name": "Jornada Clean Code",
+                    "isStudent": true
+                }
+            ],
+            "endereco": {
+                "street": "Tiradentes",
+                "number": 654,
+                "zipCode": "64230000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti"
+                },
+                "phone": {
+                    "ddd": 86,
+                    "phone": "994687689"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Luiz Antonio",
+            "age": 15,
+            "nameCourses": [
+                "Academia do flutter"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "name": "Academia do flutter",
+                    "isStudent": true
+                }
+            ],
+            "endereco": {
+                "street": "XRb",
+                "number": 6154,
+                "zipCode": "64230000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti"
+                },
+                "phone": {
+                    "ddd": 98,
+                    "phone": "994687689"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Antonio joaquim",
+            "age": 42,
+            "nameCourses": [
+                "Jornada GetX",
+                "Jornada Clean Code"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "name": "Jornada GetX",
+                    "isStudent": true
+                },
+                {
+                    "id": 0,
+                    "name": "Jornada Clean Code",
+                    "isStudent": true
+                }
+            ],
+            "address": {
+                "street": "Tiradentes",
+                "number": 654,
+                "zipCode": "64230000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti"
+                },
+                "phone": {
+                    "ddd": 86,
+                    "phone": "994687689"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Luiz Antonio",
+            "age": 15,
+            "nameCourses": [
+                "Academia do flutter"
+            ],
+            "courses": [
+                {
+                    "id": 0,
+                    "name": "Academia do flutter",
+                    "isStudent": true
+                }
+            ],
+            "address": {
+                "street": "XRb",
+                "number": 6154,
+                "zipCode": "64230000",
+                "city": {
+                    "id": 1,
+                    "name": "Buriti"
+                },
+                "phone": {
+                    "ddd": 98,
+                    "phone": "994687689"
+                }
+            }
+        }
+    ]
+}

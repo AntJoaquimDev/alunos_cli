@@ -3,11 +3,11 @@ import 'dart:convert';
 class City {
   final int id;
   final String name;
-  final String uf;
+//  final String uf;
   City({
     required this.id,
     required this.name,
-    required this.uf,
+    // required this.uf,
   });
 
   Map<String, dynamic> toMap() {
@@ -15,7 +15,7 @@ class City {
 
     result.addAll({'id': id});
     result.addAll({'name': name});
-    result.addAll({'uf': uf});
+    //result.addAll({'uf': uf});
 
     return result;
   }
@@ -24,12 +24,9 @@ class City {
     return City(
       id: map['id'] ?? 0,
       name: map['name'] ?? '',
-      uf: map['uf'] ?? '',
+      // uf: map['uf'] ?? '',
     );
   }
-
-  @override
-  String toString() => 'City(id: $id, name: $name, uf: $uf)';
 
   String toJson() => json.encode(toMap());
 

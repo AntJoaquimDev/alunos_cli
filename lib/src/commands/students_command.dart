@@ -3,6 +3,7 @@ import 'package:args/command_runner.dart';
 import '../repositories/student_repository.dart';
 import 'students/subcommands/find_all_commads.dart';
 import 'students/subcommands/find_by_id_commands.dart';
+import 'students/subcommands/insert_command.dart';
 
 class StudentsCommand extends Command {
   @override
@@ -16,5 +17,6 @@ class StudentsCommand extends Command {
 
     addSubcommand(FindAllCommads(studentsRepository));
     addSubcommand(FindByIdCommands(studentsRepository));
+    addSubcommand(InsertCommand(studentsRepository));
   }
 }
