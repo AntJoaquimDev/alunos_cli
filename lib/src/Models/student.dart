@@ -1,22 +1,63 @@
 import 'dart:convert';
 import 'address.dart';
 import 'course.dart';
+/*
+    "id": 1,
+    "name": "Celenny Cristhyne",
+    "nameCourses": [
+        "Academia Flutter"
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Academia do Flutter",
+            "isStudent": true
+        },
+        {
+            "id": 2,
+            "name": "Jornada GetX",
+            "isStudent": false
+        },
+        {
+            "id": 3,
+            "name": "Jornada Clean Code",
+            "isStudent": false
+        },
+        {
+            "id": 4,
+            "name": "Jornada Arquitetura",
+            "isStudent": false
+        }
+    ],
+    "address": {
+        "street": "Rua Tiradentes",
+        "number": 654,
+        "zipCode": "64230-000",
+        "city": {
+            "id": 1,
+            "name": "Buriti dos Lopes"
+        },
+        "phone": {
+            "ddd": 86,
+            "phone": "948755556"
+        }
+    }*/
 
 class Student {
   final int? id;
   final String name;
   final int? age;
   final List<String> nameCourses;
-  final Address? address;
   final List<Course> courses;
+  final Address? address;
 
   Student({
     this.id,
     required this.name,
     this.age,
     required this.nameCourses,
-    this.address,
     required this.courses,
+    this.address,
   });
 
   Map<String, dynamic> toMap() {
@@ -25,8 +66,8 @@ class Student {
       "id": id,
       "name": name,
       "nameCourses": nameCourses,
+      "courses": courses.map((courso) => courso.toMap()).toList(),
       "endereco": address?.toMap(),
-      "courses": courses.map((curso) => curso.toMap()).toList(),
     };
     if (age != null) {
       map["age"] = age;
@@ -38,20 +79,17 @@ class Student {
   factory Student.fromMap(Map<String, dynamic> map) {
     return Student(
         id: map['id'] ?? 0,
-        name: map['name'] ?? '',
+        name: map['name'] ?? '', //"courses
+        age: map['age'] ?? 0, //"courses
         nameCourses: List<String>.from(map['nameCourses'] ?? <String>[]),
-        address: Address.fromMap(map['address'] ?? <String>{}),
         courses: map['courses']
-                ?.map<Course>((couseMap) => Course.fromMap(couseMap))
+                ?.map<Course>((courseMap) => Course.fromMap(courseMap))
                 .toList() ??
-            <Course>[]);
+            <Course>[],
+        address: Address.fromMap(map['address'] ?? <String>{}));
   }
+
   String toJson() => json.encode(toMap());
   factory Student.fromJson(String source) =>
       Student.fromMap(json.decode(source));
-
-  @override
-  String toString() {
-    return 'Aluno(id: $id, name: $name, age: $age, nameCurso: $nameCourses, endereco: $address, cursos: $courses)';
-  }
 }

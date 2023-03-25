@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class Course {
-  final String id;
+  final int id;
   final String name;
   final bool isStudent;
   Course({
@@ -21,7 +21,7 @@ class Course {
   factory Course.fromMap(Map<String, dynamic> map) {
     return Course(
       id: map[' id'] ?? 0,
-      name: map[' name'] ?? '',
+      name: map['name'] ?? '',
       isStudent: map['isStudent'] ?? false,
     );
   }

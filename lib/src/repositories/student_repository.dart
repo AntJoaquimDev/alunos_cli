@@ -17,11 +17,13 @@ class StudentRepository {
   Future<List<Student>> findAll() async {
     final response =
         await http.get(Uri.parse('http://localhost:3031/students'));
+
     if (response.statusCode != 200) {
       throw Exception();
     }
+    // print('print ${response.statusCode}');
     final responseList = jsonDecode(response.body);
-
+    // print('print ${responseList[2]}');
     return responseList
         .map<Student>((studentMap) => Student.fromMap(studentMap))
         .toList();

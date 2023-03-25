@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class City {
-  final String id;
+  final int id;
   final String name;
   final String uf;
   City({
@@ -22,7 +22,7 @@ class City {
 
   factory City.fromMap(Map<String, dynamic> map) {
     return City(
-      id: map['id'] ?? '',
+      id: map['id'] ?? 0,
       name: map['name'] ?? '',
       uf: map['uf'] ?? '',
     );
