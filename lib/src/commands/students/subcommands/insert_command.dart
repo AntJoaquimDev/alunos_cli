@@ -25,7 +25,7 @@ class InsertCommand extends Command {
 
   @override
   Future<void> run() async {
-    print('***************************');
+    print('*********** Inserir Alunos ****************');
     final filePath = argResults?['file'];
     final students = File(filePath).readAsLinesSync();
     // final students = await stRepository.insert();

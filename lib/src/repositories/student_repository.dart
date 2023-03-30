@@ -50,11 +50,17 @@ class StudentRepository {
     );
   }
 
-  Future<void> remove(Student student) async {
+  Future<void> removeBYName(Student student) async {
     await http.delete(
-      Uri.parse('http://localhost:3031/students/${student.id}'),
+      Uri.parse('http://localhost:3031/students/${student.name}'),
       body: student.toJson(),
       headers: {'content-type': 'application/json'},
+    );
+  }
+
+  Future<void> removeById(int id) async {
+    await http.delete(
+      Uri.parse('http://localhost:3031/students/${id}'),
     );
   }
 }
