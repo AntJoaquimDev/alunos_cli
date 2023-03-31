@@ -18,17 +18,3 @@ class ProductDioRepository {
     }
   }
 }
-/* final String url = "http://localhost:3031/students'";
-  Future<void> insert(Student student) async {
-    try {
-      final studantResult = await Dio().get(url);
-
-      return studantResult.data.map<Student>((student) {
-        return Student.fromMap(student);
-      }).toList();
-    } on DioError catch (e) {
-      print(e);
-      throw Exception();
-    }
-  }
-}*/

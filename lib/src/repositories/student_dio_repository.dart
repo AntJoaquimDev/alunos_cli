@@ -7,11 +7,14 @@ import 'package:http/http.dart' as http;
 
 class StudentDioRepository {
   Future<void> insert(Student student) async {
-    final response = await http.post(
-        Uri.parse('http://localhost:3031/students'),
-        body: student.toJson(),
-        headers: {'content-type': 'application/json'});
-    if (response.statusCode != 200) {
+    final url = 'http://localhost:3031/students';
+    try {
+      await Dio().post(
+        url,
+        data: student.toMap(),
+      );
+    } on DioError catch (e) {
+      print(e);
       throw Exception();
     }
   }
@@ -47,21 +50,27 @@ class StudentDioRepository {
     }
   }
 
-  // throw Exception('Não existe Estudante com o $id');
   Future<void> upDate(Student student) async {
-    await http.put(
-      Uri.parse('http://localhost:3031/students/${student.id}'),
-      body: student.toJson(),
-      headers: {'content-type': 'application/json'},
-    );
+    final url = 'http://localhost:3031/students/${student.id}';
+    try {
+      await Dio().put(
+        url,
+        data: student.toMap(),
+      );
+    } on DioError catch (e) {
+      print(e);
+      throw Exception();
+    }
   }
 
-  Future<void> removeBYName(Student student) async {
-    await http.delete(
-      Uri.parse('http://localhost:3031/students/${student.name}'),
-      body: student.toJson(),
-      headers: {'content-type': 'application/json'},
-    );
+  Future<void> removeBYName(int id) async {
+    final url = 'http://localhost:3031/students/${id}';
+    try {
+      await Dio().delete(url);
+    } on DioError catch (e) {
+      print(e);
+      throw Exception();
+    }
   }
 
   Future<void> removeById(int id) async {
