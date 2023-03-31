@@ -10,6 +10,7 @@ dependencies:
   path: ^1.8.0
   http: ^0.13.5
   args: ^2.4.0
+  dio: ^5.1.1
 
 
 dev_dependencies:

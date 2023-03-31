@@ -1,13 +1,15 @@
 import 'dart:io';
 
+import 'package:alunos_cli/src/repositories/student_dio_repository.dart';
 import 'package:args/command_runner.dart';
 
 import '../../../repositories/student_repository.dart';
 
 class FindAllCommads extends Command {
-  final StudentRepository stRepository;
+  // final StudentRepository stRepository;
+  final StudentDioRepository stRepositoryDio;
 
-  FindAllCommads(this.stRepository);
+  FindAllCommads(this.stRepositoryDio);
   @override
   String get description => 'Find All Students';
 
@@ -18,7 +20,7 @@ class FindAllCommads extends Command {
     print('');
     print('Aguarde buscando Alunos...');
     print('');
-    final students = await stRepository.findAll();
+    final students = await stRepositoryDio.findAll();
     print('Apresentar também os curso do Aluno? [S/N]');
 
     final showCourses = stdin.readLineSync();
